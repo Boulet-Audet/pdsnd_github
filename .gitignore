@@ -1,4 +1,5 @@
 #cIgnore all CSV files
 *.csv
 **/*.csv
+**/*.png
 .github/**
