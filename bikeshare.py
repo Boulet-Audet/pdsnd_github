@@ -287,10 +287,13 @@ def user_stats(df):
     if 'Birth Year' in df.columns:
         earliest_year = int(df['Birth Year'].min())
         most_recent_year = int(df['Birth Year'].max())
+        #Add the median year of birth
+        median_year = int(df['Birth Year'].median())
         most_common_year = int(df['Birth Year'].mode()[0])
         print(f"Earliest year of birth: {earliest_year}")
         print(f"Most recent year of birth: {most_recent_year}")
         print(f"Most common year of birth: {most_common_year}")
+        print(f"Median year of birth: {median_year}")
     else:
         print("No Birth Year data available.")
 
