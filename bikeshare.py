@@ -102,6 +102,7 @@ def load_data(cityFile, month, day):
         else:# Get the month index (1-12) and filter the DataFrame
             month_index = months.index(month) + 1
             df = df[df['Start Time'].dt.month == month_index]
+    
     #Filter out the day if specified except 'all'
     if day != 'all':
         days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
@@ -216,7 +217,7 @@ def trip_duration_stats(df):
         return None
     
     #Displays statistics on the total and average trip duration.
-    print('\nCalculating Trip Duration...\n')
+    #print('\nCalculating Trip Duration...\n')
     #Start the timer
     start_time = time.time()
 
@@ -227,6 +228,10 @@ def trip_duration_stats(df):
     # Calculates and prints the mean travel time
     mean_travel_time = df['Trip Duration'].mean() / 60  # Convert seconds to minutes
     print(f"Mean travel time: {mean_travel_time:.2f} minutes")
+
+    #Calculate and prints the median travel time
+    median_travel_time = df['Trip Duration'].median() / 60
+    print(f"Median travel time: {median_travel_time:.2f} minutes") 
 
     #Calculate and prints the travel time standard deviation in minutes
     travel_time_std = df['Trip Duration'].std() / 60
@@ -268,7 +273,7 @@ def user_stats(df):
         return None
     
     #Displays statistics on bikeshare users.
-    print('\nCalculating User Stats...\n')
+    #print('\nCalculating User Stats...\n')
     start_time = time.time()
 
     # Display counts of user types
@@ -286,10 +291,13 @@ def user_stats(df):
     if 'Birth Year' in df.columns:
         earliest_year = int(df['Birth Year'].min())
         most_recent_year = int(df['Birth Year'].max())
+        #Add the median year of birth
+        median_year = int(df['Birth Year'].median())
         most_common_year = int(df['Birth Year'].mode()[0])
         print(f"Earliest year of birth: {earliest_year}")
         print(f"Most recent year of birth: {most_recent_year}")
         print(f"Most common year of birth: {most_common_year}")
+        print(f"Median year of birth: {median_year}")
     else:
         print("No Birth Year data available.")
 
@@ -314,7 +322,7 @@ def main():
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes' and restart.lower() != 'y':
-            break
-if __name__ == "__main__":
+            break #End the loop if the user does not want to restart
+if __name__ == "__main__":  #If the file is run directly, run the main function
     #Loads the main function to start the program
 	main()
