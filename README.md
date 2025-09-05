@@ -1,5 +1,31 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
+This Repo is Maxime's Udacity project to filter ride share csv data files.
+It will allow reading CSV files from ridesharing and loading them into a Panda dataframe.
+It displays filtered values to the user using a terminal interface and plots histograms using matplotlib.
+
+Bikeshare Data Viewer
+### Overview
+A Python application to explore US bikeshare data from CSV files.
+It provides interactive filtering and visual/statistical analysis of trip data.
+
+*Features
+    Lists available CSV files in the current directory
+    Filters data by city, month, and day of week
+    Displays statistics on travel times, stations, trip durations, and user demographics
+    Generates histograms and bar charts using matplotlib
+*Requirements
+    Python 3.x
+    pandas
+    numpy
+    matplotlib
+*Installation
+    Clone or download this repository.
+    Place your bikeshare CSV files in the project directory.
+    Install dependencies:
+    Usage
+    Run the program in your terminal:
+
 ### Date created
 Create on 2025-09-02
 
