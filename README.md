@@ -9,22 +9,22 @@ Bikeshare Data Viewer
 A Python application to explore US bikeshare data from CSV files.
 It provides interactive filtering and visual/statistical analysis of trip data.
 
-*Features
-    Lists available CSV files in the current directory
-    Filters data by city, month, and day of week
-    Displays statistics on travel times, stations, trip durations, and user demographics
-    Generates histograms and bar charts using matplotlib
-*Requirements
-    Python 3.x
-    pandas
-    numpy
-    matplotlib
-*Installation
-    Clone or download this repository.
-    Place your bikeshare CSV files in the project directory.
-    Install dependencies:
-    Usage
-    Run the program in your terminal:
+* Features
+    * Lists available CSV files in the current directory
+    * Filters data by city, month, and day of week
+    * Displays statistics on travel times, stations, trip durations, and user demographics
+    * Generates histograms and bar charts using matplotlib
+* Requirements
+    * Python 3.x
+    * pandas
+    * numpy
+    * matplotlib
+* Installation
+    * Clone or download this repository.
+    * Place your bikeshare CSV files in the project directory.
+    * Install dependencies:
+* Usage
+    * Run the program in your terminal:
 
 ### Date created
 Create on 2025-09-02
