@@ -229,6 +229,10 @@ def trip_duration_stats(df):
     mean_travel_time = df['Trip Duration'].mean() / 60  # Convert seconds to minutes
     print(f"Mean travel time: {mean_travel_time:.2f} minutes")
 
+    #Calculate and prints the median travel time
+    median_travel_time = df['Trip Duration'].median() / 60
+    print(f"Median travel time: {median_travel_time:.2f} minutes") 
+
     #Calculate and prints the travel time standard deviation in minutes
     travel_time_std = df['Trip Duration'].std() / 60
     print(f"Standard deviation of travel time: {travel_time_std:.2f} minutes")
