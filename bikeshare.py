@@ -102,6 +102,7 @@ def load_data(cityFile, month, day):
         else:# Get the month index (1-12) and filter the DataFrame
             month_index = months.index(month) + 1
             df = df[df['Start Time'].dt.month == month_index]
+    
     #Filter out the day if specified except 'all'
     if day != 'all':
         days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
@@ -216,7 +217,7 @@ def trip_duration_stats(df):
         return None
     
     #Displays statistics on the total and average trip duration.
-    print('\nCalculating Trip Duration...\n')
+    #print('\nCalculating Trip Duration...\n')
     #Start the timer
     start_time = time.time()
 
@@ -268,7 +269,7 @@ def user_stats(df):
         return None
     
     #Displays statistics on bikeshare users.
-    print('\nCalculating User Stats...\n')
+    #print('\nCalculating User Stats...\n')
     start_time = time.time()
 
     # Display counts of user types
@@ -314,7 +315,7 @@ def main():
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes' and restart.lower() != 'y':
-            break
-if __name__ == "__main__":
+            break #End the loop if the user does not want to restart
+if __name__ == "__main__":  #If the file is run directly, run the main function
     #Loads the main function to start the program
 	main()
